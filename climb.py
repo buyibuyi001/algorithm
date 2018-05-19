@@ -1,12 +1,9 @@
 import time
 
-
 def decorator(func):
     #print("start ",time.time())
-    def wrapper(*args,**kwargs):
-        
-        func(*args,**kwargs)
-    
+    def wrapper(*args,**kwargs):       
+        func(*args,**kwargs)   
     return wrapper
 
 @decorator
@@ -14,7 +11,7 @@ def climb(n,steps):
     count=0
     if n==0:
         count=1
-    elif n>0:
+    if n>0:
         for step in range(1,steps+1):
             count += climb(n-step,steps)
     return count
