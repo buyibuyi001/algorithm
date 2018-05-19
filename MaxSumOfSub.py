@@ -1,6 +1,6 @@
 def maxSumOfSubarray(alist):
     if alist==[]:
-        return 0
+        return None
     alist_len=len(alist)
     curMax=finMax=curSum=alist[0]
 
